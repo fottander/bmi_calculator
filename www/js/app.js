@@ -24,6 +24,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/tabs.html'
   })
 
+    .state('tab.bmi', {
+      url: '/bmi',
+      views: {
+        'tab-bmi': {
+          templateUrl: 'templates/calculator/calculator.html',
+          controller: 'BmiController'
+        }
+      }
+    })
+
     .state('tab.about', {
       url: '/about',
       views: {
@@ -32,7 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'AboutController'
         }
       }
-    })
+    });
 
 
   $urlRouterProvider.otherwise('/tab/about');
